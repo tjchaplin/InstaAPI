@@ -8,15 +8,15 @@ This Application will allow you to query any database or collection on your mong
 
 Input a query with the following syntax to recieve a response.
 
-localhost:port/Database/Collection?query=here&params=here
+`localhost:port/Database/Collection?query=here&params=here`
 
 
 EG
 
-api.SamHeslop/MyDatabase/MyCollection?name=myName
+`api.SamHeslop/MyDatabase/MyCollection?name=myName`
 
 Will complete a mongo query as followed.
 
-myCollection.find({name:'myName'},function(err,res){
-  res.send(results);
-};
+    myCollection.find({name:'myName'},function(err,res){
+      res.send(results);
+    };
