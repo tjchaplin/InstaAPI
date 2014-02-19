@@ -1,16 +1,24 @@
 var gulp = require('gulp'),
-  jshint = require('gulp-jshint');
+  jshint = require('gulp-jshint'),
+  mocha = require('gulp-mocha');
+
+var paths = {
+	scripts: ['./lib/*.js', './test/*.js']
+};
 
 gulp.task('lint', function() {
-  gulp.src('*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+  gulp.src(paths.scripts)
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'));
 });
 
-// // Rerun the task when a file changes
-// gulp.task('watch', function () {
-//   gulp.watch(paths.scripts, ['scripts']);
-//   gulp.watch(paths.images, ['images']);
-// });
+gulp.task('test', function() {
+  gulp.src(paths.scripts)
+	.pipe(mocha());
+});
 
-gulp.task('default', ['lint']);
+gulp.task('watch', function () {
+  gulp.watch(paths.scripts, ['lint', 'test']);
+});
+
+gulp.task('default', ['lint', 'test', 'watch']);

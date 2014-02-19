@@ -1,0 +1,31 @@
+{
+  "name": "Restplate",
+  "version": "0.0.1",
+  "description": "REST Api Solution to Expose entire Mongo Database and Collections located on a machine with a Query API",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mongojs": "~0.10.0",
+    "restify": "~2.6.1"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-jshint": "~1.4.2",
+    "gulp-mocha": "~0.4.1",
+    "gulp-watch": "~0.5.0",
+    "should": "~3.1.2",
+    "mocha": "~1.17.1"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamHeslop/Restplate.git"
+  },
+  "author": "Sam Heslop",
+  "license": "MIT",
+  "gitHead": "75548c03c8e5d44618470fd6ab9dcfd6b093cb06"
+}
