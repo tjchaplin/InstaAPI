@@ -1,4 +1,4 @@
-Restplate
+InstaAPI
 =========
 
 REST API that dynamically mounts all MongoDB Databases and Collections as queryable endpoints.

@@ -23,8 +23,8 @@ describe('checkQueryParams Should Detect Invalid Parameters', function(){
 		invalidParams.push('PropertyFive');
 
 		var result = api.checkQueryParams(requestParams, doc);
-
-		true.should.be.eql(result === invalidParams);
+		
+		result.should.be.eql(invalidParams);
 	});
 });
 
@@ -51,7 +51,7 @@ describe('locateMongoParameters Should Populate New Object with Params from Requ
 			CollectionName : 'MyCollection' 
 		};
 
-		true.should.be.eql(result.DatabaseName === 'MyDatabase');
-		true.should.be.eql(result.CollectionName === 'MyCollection');
+		result.DatabaseName.should.be.eql('MyDatabase');
+		result.CollectionName.should.be.eql('MyCollection');
 	});
 });
