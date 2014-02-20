@@ -6,6 +6,6 @@ app.use(restify.queryParser());
 
 routes.exposeEndPoints(app);
 
-app.listen(3000, function() {
+app.listen(3000, function(){
   console.log('API live at', app.url);
 });
