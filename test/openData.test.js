@@ -7,11 +7,12 @@ describe('createInParam Should Turn In Query Parameters into In Query Object', f
 		var requestParams = {
 			PropertyOne : '100',
 			PropertyTwo : 'Hello',
-			PropertyThree : ['ValueOne', 'ValueTwo']
+			PropertyThree : '[ValueOne,ValueTwo]'
 		};
 
-		var result = oData.inObject(requestParams.PropertyThree);
+		requestParams.PropertyThree = oData.inObject(requestParams.PropertyThree);
 		
-		result.should.be.eql({ $in: ['ValueOne', 'ValueTwo'] });
+		requestParams.PropertyThree.$in[0].should.be.eql('ValueOne');
+		requestParams.PropertyThree.$in[1].should.be.eql('ValueTwo');
 	});
 });
