@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   mocha = require('gulp-mocha');
 
 var paths = {
-	scripts: ['./lib/*.js', './test/*.js']
+	scripts: ['./lib/*.js', './test/**/*.js']
 };
 
 gulp.task('lint', function() {
