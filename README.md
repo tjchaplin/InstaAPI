@@ -24,12 +24,14 @@ Will complete a mongo query as followed.
 #Query Support
 Currently supports the following URL query syntax:
 
-In Statement(Array Notation)
+In Statement(Array Notation) - 
+
 `api.SamHeslop/MyDatabase/MyCollection?name=[Mac,Dennis,Charlie,Dee,Frank]`
 
-Greater Than and Less Than Statements
+Greater Than and Less Than Statements - 
+
 `api.SamHeslop/MyDatabase/MyCollection?price gt 100`
 `api.SamHeslop/MyDatabase/MyCollection?price lt 100`
 
-Contains Query using Case Insensitive Regex
+Contains Query using Case Insensitive Regex - 
 `api.SamHeslop/MyDatabase/MyCollection?name=contains(pa)`
