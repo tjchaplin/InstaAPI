@@ -13,5 +13,5 @@ app.set('port', process.env.PORT || 3000);
 routes.exposeEndPoints(app);
 apiStatus.monitorAPI(app);
 
-console.log('API Live on port 3000\n socket.io initialised.')
+console.log('API Live on port 3000\nsocket.io initialised.')
 
