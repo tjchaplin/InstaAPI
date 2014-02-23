@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "mongojs": "~0.10.0",
-    "restify": "~2.6.1"
+    "express": "~3.4.8"
   },
   "devDependencies": {
     "gulp": "~3.5.2",
