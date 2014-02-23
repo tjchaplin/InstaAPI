@@ -8,10 +8,13 @@ script.
     socket.on('broadcastStatus', function (data) {
         $('#uptime').text(data.Uptime);
         $('#requestsPerMinute').text(data.RequestsPerMinute);
+        $('#successfulRequests').text('Successful Requests: ' + data.SuccessfulRequests);
+        $('#unsuccessfulRequests').text('Unsuccessful Requests: ' + data.UnsuccessfulRequests);
     });
 
 body
-h1 #{APIName}
+h1.titleBanner #{APIName}
+
 div.row
     div.statPanel.col-xs-2.col-sm-2.col-md-2.col-lg-2
         div.statPanelHeader
@@ -49,5 +52,21 @@ div.row
                     span.statPanelIcon.icon-radio
                 div.col-lg-10
                     h1#requestsPerMinute
+div.row
+    div.statBanner
+        div.statBannerHeader
+            h1#requestsTitle Request Statistics
+        div.row
+            div.requestCounts.col-xs-4.col-sm-4.col-md-4.col-lg-4
+                div.row
+                    div.col-xs-2.col-sm-2.col-md-2.col-lg-2
+                        span.requestIcon.icon-checkmark3
+                    div.col-xs-10.col-xm-10.col-md-10.col-lg-10
+                        p#successfulRequests
+                div.row
+                    div.col-xs-2.col-sm-2.col-md-2.col-lg-2
+                        span.requestIcon.icon-cancel
+                    div.col-xs-10.col-xm-10.col-md-10.col-lg-10
+                        p#unsuccessfulRequests 
 
 include Shared/scripts.jade

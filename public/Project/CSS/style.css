@@ -23,6 +23,16 @@ body h1{
 	margin-left:40px;
 }
 
+/* ========== Title Banner CSS ========== */
+h1.titleBanner {
+	font-family: 'Exo 2', sans-serif;
+	width:20%;
+	margin-left: 28px;
+	margin-bottom: 15px;
+	font-size: 55px;
+	padding-right: 0px; 
+ 	padding-left: 0px;
+}
 
 /* ========== Stat Panel CSS ========== */
 div.statPanel {
@@ -60,7 +70,7 @@ div.statPanelBody h1 {
 	font-family: 'Exo 2', sans-serif;
 	font-weight: bold;
 	display: inline-block;
-	width: 40%;
+	width: 100%;
 	margin-left: 55px;
 	font-size: 22px;
 	vertical-align: center;
@@ -71,4 +81,47 @@ div.statPanelBody span.statPanelIcon {
 	margin-right: 8px;
 	margin-left: 10px;
 	color: #292929;
+}
+
+/* ========== Stat Panel CSS ========== */
+div.statBanner {
+	font-family: 'Exo 2', sans-serif;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-bottom: 15px;
+	width:95%;
+	background-color: #ffffff;
+	font-size: 11px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #E5E5E5;
+	-webkit-box-shadow: 1px 2px 1px 1px #E5E5E5;
+	box-shadow: 1px 2px 1px 1px #E5E5E5;
+	padding-right: 0px; 
+ 	padding-left: 0px;
+}
+
+.statBanner div.statBannerHeader {
+	padding-top: 1px;
+	border-bottom: 1px solid #E5E5E5;
+	background-color: #26004F;
+}
+
+h1#requestsTitle {
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+div.requestCounts {
+	font-size: 35px;
+}
+
+.requestCounts p{
+	font-size: 15px;
+	padding-top: 13px;
+}
+
+span.requestIcon {
+	font-size: 35px;
+	margin-left: 15px;
 }
