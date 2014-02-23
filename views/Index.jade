@@ -1,0 +1,46 @@
+doctype html
+
+head
+include Shared/css.jade
+
+body
+h1 #{APIName}
+div.row
+    div.statPanel.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        div.statPanelHeader
+            h1.statPanelTitle Status
+        div.statPanelBody
+            div.row
+                div.col-lg-2
+                    span.statPanelIcon.icon-health
+                div.col-lg-10
+                    h1 Healthy
+    div.statPanel.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        div.statPanelHeader
+            h1.statPanelTitle Uptime
+        div.statPanelBody
+            div.row
+                div.col-lg-2
+                    span.statPanelIcon.icon-hourglass
+                div.col-lg-10
+                    h1 24y, 10m, 16d
+    div.statPanel.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        div.statPanelHeader
+            h1.statPanelTitle Response Time
+        div.statPanelBody
+            div.row
+                div.col-lg-2
+                    span.statPanelIcon.icon-atom
+                div.col-lg-10
+                    h1 23ms
+    div.statPanel.col-xs-2.col-sm-2.col-md-2.col-lg-2
+        div.statPanelHeader
+            h1.statPanelTitle Requests per Minute
+        div.statPanelBody
+            div.row
+                div.col-lg-2
+                    span.statPanelIcon.icon-radio
+                div.col-lg-10
+                    h1 23ms
+
+include Shared/scripts.jade
