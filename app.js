@@ -10,8 +10,10 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('port', process.env.PORT || 3000);
 
-routes.exposeEndPoints(app);
 apiStatus.monitorAPI(app);
+routes.exposeEndPoints(app);
+
+
 
 console.log('API Live on port 3000\nsocket.io initialised.')
 
