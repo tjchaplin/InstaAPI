@@ -8,6 +8,7 @@ script.
     socket.on('broadcastStatus', function (data) {
         $('#uptime').text(data.Uptime);
         $('#requestsPerMinute').text(data.RequestsPerMinute);
+        $('#totalRequests').text('Total Requests: ' + data.TotalRequests);
         $('#successfulRequests').text('Successful Requests: ' + data.SuccessfulRequests);
         $('#unsuccessfulRequests').text('Unsuccessful Requests: ' + data.UnsuccessfulRequests);
     });
@@ -58,6 +59,11 @@ div.row
             h1#requestsTitle Request Statistics
         div.row
             div.requestCounts.col-xs-4.col-sm-4.col-md-4.col-lg-4
+                div.row
+                    div.col-xs-2.col-sm-2.col-md-2.col-lg-2
+                        span.requestIcon.icon-abacus
+                    div.col-xs-10.col-xm-10.col-md-10.col-lg-10
+                        p#totalRequests
                 div.row
                     div.col-xs-2.col-sm-2.col-md-2.col-lg-2
                         span.requestIcon.icon-checkmark3
